@@ -1,0 +1,2 @@
+simulator: test_CPU.v; 
+	iverilog -o test_1 test_CPU.v CPU.v IFStage.v IDStage.v EXEStage.v MEMStage.v WBStage.v IF2ID.v ID2EXE.v EXE2MEM.v MEM2WB.v regFile.v logic_units.v InstructionRAM.v MainMemory.v controller.v ALU.v HazardUnit.v && vvp test_1;
